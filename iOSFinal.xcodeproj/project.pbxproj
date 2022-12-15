@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3E903294BA34800FED69A /* NewAmountVC.swift */; };
 		24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F93829294B8537003F06F2 /* AppDelegate.swift */; };
 		24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382B294B8537003F06F2 /* SceneDelegate.swift */; };
 		24F9382E294B8537003F06F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382D294B8537003F06F2 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24D3E903294BA34800FED69A /* NewAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAmountVC.swift; sourceTree = "<group>"; };
 		24F93826294B8537003F06F2 /* iOSFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F93829294B8537003F06F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F9382B294B8537003F06F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				24F93837294B853A003F06F2 /* LaunchScreen.storyboard */,
 				24F9383A294B853A003F06F2 /* Info.plist */,
 				24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */,
+				24D3E903294BA34800FED69A /* NewAmountVC.swift */,
 			);
 			path = iOSFinal;
 			sourceTree = "<group>";
@@ -106,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = 24F93821294B8537003F06F2 /* Build configuration list for PBXProject "iOSFinal" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -143,6 +146,7 @@
 			files = (
 				24F9382E294B8537003F06F2 /* ViewController.swift in Sources */,
 				24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */,
+				24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */,
 				24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */,
 				24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */,
 			);
