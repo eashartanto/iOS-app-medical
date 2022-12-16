@@ -4,17 +4,19 @@
 	classes = {
 	};
 	objectVersion = 55;
-	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		244BE4F5294BD66E00055CA0 /* NewReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244BE4F4294BD66E00055CA0 /* NewReminderVC.swift */; };
-		244BE4F8294BF94500055CA0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F7294BF94500055CA0 /* FacebookCore */; };
-		244BE4FA294BF94500055CA0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F9294BF94500055CA0 /* FacebookLogin */; };
-		24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3E903294BA34800FED69A /* NewAmountVC.swift */; };
 		0430DF36294BA2E400FE57CD /* FinanceMovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */; };
 		0430DF38294BB29B00FE57CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430DF37294BB29B00FE57CD /* Assets.xcassets */; };
 		04B8AA74294BBA4E003102BC /* FinancialMovementTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8AA73294BBA4E003102BC /* FinancialMovementTableCell.swift */; };
+		244BE4F5294BD66E00055CA0 /* NewReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244BE4F4294BD66E00055CA0 /* NewReminderVC.swift */; };
+		244BE4F8294BF94500055CA0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F7294BF94500055CA0 /* FacebookCore */; };
+		244BE4FA294BF94500055CA0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F9294BF94500055CA0 /* FacebookLogin */; };
+		24A17B7C294D278100872C22 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A17B79294D278100872C22 /* AddTaskController.swift */; };
+		24A17B7D294D278100872C22 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A17B7A294D278100872C22 /* TaskCell.swift */; };
+		24A17B7E294D278100872C22 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A17B7B294D278100872C22 /* TodoViewController.swift */; };
+		24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3E903294BA34800FED69A /* NewAmountVC.swift */; };
 		24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F93829294B8537003F06F2 /* AppDelegate.swift */; };
 		24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382B294B8537003F06F2 /* SceneDelegate.swift */; };
 		24F9382E294B8537003F06F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382D294B8537003F06F2 /* ViewController.swift */; };
@@ -25,11 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		244BE4F4294BD66E00055CA0 /* NewReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderVC.swift; sourceTree = "<group>"; };
-		24D3E903294BA34800FED69A /* NewAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAmountVC.swift; sourceTree = "<group>"; };
 		0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMovementsViewController.swift; sourceTree = "<group>"; };
 		0430DF37294BB29B00FE57CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B8AA73294BBA4E003102BC /* FinancialMovementTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialMovementTableCell.swift; sourceTree = "<group>"; };
+		244BE4F4294BD66E00055CA0 /* NewReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderVC.swift; sourceTree = "<group>"; };
+		24A17B79294D278100872C22 /* AddTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
+		24A17B7A294D278100872C22 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		24A17B7B294D278100872C22 /* TodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		24D3E903294BA34800FED69A /* NewAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAmountVC.swift; sourceTree = "<group>"; };
 		24F93826294B8537003F06F2 /* iOSFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F93829294B8537003F06F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F9382B294B8537003F06F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		24F93828294B8537003F06F2 /* iOSFinal */ = {
 			isa = PBXGroup;
 			children = (
+				24A17B79294D278100872C22 /* AddTaskController.swift */,
+				24A17B7A294D278100872C22 /* TaskCell.swift */,
+				24A17B7B294D278100872C22 /* TodoViewController.swift */,
 				244BE4F4294BD66E00055CA0 /* NewReminderVC.swift */,
 				24D3E903294BA34800FED69A /* NewAmountVC.swift */,
 				24F93829294B8537003F06F2 /* AppDelegate.swift */,
@@ -131,7 +139,6 @@
 			};
 			buildConfigurationList = 24F93821294B8537003F06F2 /* Build configuration list for PBXProject "iOSFinal" */;
 			compatibilityVersion = "Xcode 13.0";
-			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -173,8 +180,11 @@
 				24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */,
 				C2DB3F19294BE9D200EA46EA /* SettingsTableViewController.swift in Sources */,
 				24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */,
+				24A17B7E294D278100872C22 /* TodoViewController.swift in Sources */,
 				04B8AA74294BBA4E003102BC /* FinancialMovementTableCell.swift in Sources */,
 				24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */,
+				24A17B7C294D278100872C22 /* AddTaskController.swift in Sources */,
+				24A17B7D294D278100872C22 /* TaskCell.swift in Sources */,
 				24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */,
 				244BE4F5294BD66E00055CA0 /* NewReminderVC.swift in Sources */,
 				0430DF36294BA2E400FE57CD /* FinanceMovementsViewController.swift in Sources */,
