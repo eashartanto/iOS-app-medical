@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0430DF36294BA2E400FE57CD /* FinanceMovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */; };
+		0430DF38294BB29B00FE57CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430DF37294BB29B00FE57CD /* Assets.xcassets */; };
+		04B8AA74294BBA4E003102BC /* FinancialMovementTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8AA73294BBA4E003102BC /* FinancialMovementTableCell.swift */; };
 		24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F93829294B8537003F06F2 /* AppDelegate.swift */; };
 		24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382B294B8537003F06F2 /* SceneDelegate.swift */; };
 		24F9382E294B8537003F06F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382D294B8537003F06F2 /* ViewController.swift */; };
 		24F93831294B8537003F06F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F9382F294B8537003F06F2 /* Main.storyboard */; };
 		24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */; };
-		24F93836294B853A003F06F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F93835294B853A003F06F2 /* Assets.xcassets */; };
 		24F93839294B853A003F06F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F93837294B853A003F06F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceMovementsViewController.swift; sourceTree = "<group>"; };
+		0430DF37294BB29B00FE57CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04B8AA73294BBA4E003102BC /* FinancialMovementTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialMovementTableCell.swift; sourceTree = "<group>"; };
 		24F93826294B8537003F06F2 /* iOSFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F93829294B8537003F06F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24F9382B294B8537003F06F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24F9382D294B8537003F06F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24F93830294B8537003F06F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24F93833294B8537003F06F2 /* iOSFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSFinal.xcdatamodel; sourceTree = "<group>"; };
-		24F93835294B853A003F06F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24F93838294B853A003F06F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24F9383A294B853A003F06F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,11 +65,13 @@
 				24F93829294B8537003F06F2 /* AppDelegate.swift */,
 				24F9382B294B8537003F06F2 /* SceneDelegate.swift */,
 				24F9382D294B8537003F06F2 /* ViewController.swift */,
+				0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */,
+				04B8AA73294BBA4E003102BC /* FinancialMovementTableCell.swift */,
 				24F9382F294B8537003F06F2 /* Main.storyboard */,
-				24F93835294B853A003F06F2 /* Assets.xcassets */,
 				24F93837294B853A003F06F2 /* LaunchScreen.storyboard */,
 				24F9383A294B853A003F06F2 /* Info.plist */,
 				24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */,
+				0430DF37294BB29B00FE57CD /* Assets.xcassets */,
 			);
 			path = iOSFinal;
 			sourceTree = "<group>";
@@ -129,7 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24F93839294B853A003F06F2 /* LaunchScreen.storyboard in Resources */,
-				24F93836294B853A003F06F2 /* Assets.xcassets in Resources */,
+				0430DF38294BB29B00FE57CD /* Assets.xcassets in Resources */,
 				24F93831294B8537003F06F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,8 +149,10 @@
 			files = (
 				24F9382E294B8537003F06F2 /* ViewController.swift in Sources */,
 				24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */,
+				04B8AA74294BBA4E003102BC /* FinancialMovementTableCell.swift in Sources */,
 				24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */,
 				24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */,
+				0430DF36294BA2E400FE57CD /* FinanceMovementsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
