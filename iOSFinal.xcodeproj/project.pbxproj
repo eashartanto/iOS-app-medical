@@ -15,6 +15,7 @@
 		24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */; };
 		24F93836294B853A003F06F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F93835294B853A003F06F2 /* Assets.xcassets */; };
 		24F93839294B853A003F06F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F93837294B853A003F06F2 /* LaunchScreen.storyboard */; };
+		C2DB3F19294BE9D200EA46EA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB3F18294BE9D200EA46EA /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		24F93835294B853A003F06F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24F93838294B853A003F06F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24F9383A294B853A003F06F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DB3F18294BE9D200EA46EA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				24F93829294B8537003F06F2 /* AppDelegate.swift */,
 				24F9382B294B8537003F06F2 /* SceneDelegate.swift */,
+				C2DB3F18294BE9D200EA46EA /* SettingsTableViewController.swift */,
 				24F9382D294B8537003F06F2 /* ViewController.swift */,
 				24F9382F294B8537003F06F2 /* Main.storyboard */,
 				24F93835294B853A003F06F2 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				24F9382E294B8537003F06F2 /* ViewController.swift in Sources */,
 				24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */,
+				C2DB3F19294BE9D200EA46EA /* SettingsTableViewController.swift in Sources */,
 				24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */,
 				24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */,
 				24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */,
