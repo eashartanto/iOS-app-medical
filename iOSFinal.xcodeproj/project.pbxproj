@@ -9,6 +9,8 @@
 
 /* Begin PBXBuildFile section */
 		244BE4F5294BD66E00055CA0 /* NewReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244BE4F4294BD66E00055CA0 /* NewReminderVC.swift */; };
+		244BE4F8294BF94500055CA0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F7294BF94500055CA0 /* FacebookCore */; };
+		244BE4FA294BF94500055CA0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F9294BF94500055CA0 /* FacebookLogin */; };
 		24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3E903294BA34800FED69A /* NewAmountVC.swift */; };
 		0430DF36294BA2E400FE57CD /* FinanceMovementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */; };
 		0430DF38294BB29B00FE57CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430DF37294BB29B00FE57CD /* Assets.xcassets */; };
@@ -19,6 +21,7 @@
 		24F93831294B8537003F06F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F9382F294B8537003F06F2 /* Main.storyboard */; };
 		24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */; };
 		24F93839294B853A003F06F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F93837294B853A003F06F2 /* LaunchScreen.storyboard */; };
+		C2DB3F19294BE9D200EA46EA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DB3F18294BE9D200EA46EA /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,7 @@
 		24F93833294B8537003F06F2 /* iOSFinal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSFinal.xcdatamodel; sourceTree = "<group>"; };
 		24F93838294B853A003F06F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24F9383A294B853A003F06F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DB3F18294BE9D200EA46EA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244BE4FA294BF94500055CA0 /* FacebookLogin in Frameworks */,
+				244BE4F8294BF94500055CA0 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +77,7 @@
 				24D3E903294BA34800FED69A /* NewAmountVC.swift */,
 				24F93829294B8537003F06F2 /* AppDelegate.swift */,
 				24F9382B294B8537003F06F2 /* SceneDelegate.swift */,
+				C2DB3F18294BE9D200EA46EA /* SettingsTableViewController.swift */,
 				24F9382D294B8537003F06F2 /* ViewController.swift */,
 				0430DF35294BA2E400FE57CD /* FinanceMovementsViewController.swift */,
 				04B8AA73294BBA4E003102BC /* FinancialMovementTableCell.swift */,
@@ -99,6 +106,10 @@
 			dependencies = (
 			);
 			name = iOSFinal;
+			packageProductDependencies = (
+				244BE4F7294BF94500055CA0 /* FacebookCore */,
+				244BE4F9294BF94500055CA0 /* FacebookLogin */,
+			);
 			productName = iOSFinal;
 			productReference = 24F93826294B8537003F06F2 /* iOSFinal.app */;
 			productType = "com.apple.product-type.application";
@@ -128,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 24F9381D294B8537003F06F2;
+			packageReferences = (
+				244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 24F93827294B8537003F06F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,6 +171,7 @@
 			files = (
 				24F9382E294B8537003F06F2 /* ViewController.swift in Sources */,
 				24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */,
+				C2DB3F19294BE9D200EA46EA /* SettingsTableViewController.swift in Sources */,
 				24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */,
 				04B8AA74294BBA4E003102BC /* FinancialMovementTableCell.swift in Sources */,
 				24F93834294B8537003F06F2 /* iOSFinal.xcdatamodeld in Sources */,
@@ -322,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iosfinal.iOSFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iOSFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -350,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iosfinal.iOSFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iOSFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -380,6 +395,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		244BE4F7294BF94500055CA0 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		244BE4F9294BF94500055CA0 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */ = {
