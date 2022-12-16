@@ -1,19 +1,26 @@
 //
-//  NewAmountVC.swift
+//  NewReminderVC.swift
 //  iOSFinal
 //
 //  Created by Ankit Gusai on 15/12/22.
 //
+
 import UIKit
 
-class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class NewReminderVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+    let screenWidth = UIScreen.main.bounds.width - 10
+    let screenHeight = UIScreen.main.bounds.height / 2
+    var selectedRow = 0
+    
     @IBOutlet weak var picker: UIPickerView!
     
     @IBOutlet weak var categoryBG: UIView!
     @IBOutlet weak var amountNameTF: UITextField!
     
-    @IBOutlet weak var amountTF: UILabel!
+    @IBOutlet weak var pickerViewButton: UIButton!
     
+    
+    @IBOutlet weak var noteTF: UITextView!
     @IBOutlet weak var timeTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
     @IBOutlet weak var dateBG: UIView!
@@ -22,19 +29,38 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     var pickerData: [String] = ["Outgoing Pyyment", "Office Bills", "Consultant fees", "Booze", "Vacation", "Travel for Inspection"]
     
     
-    @IBOutlet weak var slider: UISlider!
-
-    var selectedRow = 0
-
-    
-    @IBAction func sliderValueChanged(_ sender: Any) {
-        amountTF.text = "\(slider.value) €"
+    @IBAction func selectCategory(_ sender: Any) {
+        let vc = UIViewController()
+        vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height:screenHeight))
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        
+        pickerView.selectRow(selectedRow, inComponent: 0, animated: false)
+        //pickerView.selectRow(selectedRowTextColor, inComponent: 1, animated: false)
+        
+        vc.view.addSubview(pickerView)
+        pickerView.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor).isActive = true
+        pickerView.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor).isActive = true
+        
+        let alert = UIAlertController(title: "Select Background Colour", message: "", preferredStyle: .actionSheet)
+        
+        alert.popoverPresentationController?.sourceView = pickerViewButton
+        alert.popoverPresentationController?.sourceRect = pickerViewButton.bounds
+        
+        alert.setValue(vc, forKey: "contentViewController")
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { (UIAlertAction) in
+            self.selectedRow = pickerView.selectedRow(inComponent: 0)
+            
+            self.pickerViewButton.setTitle(self.pickerData[self.selectedRow], for: .normal)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedRow = row
-    }
-    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -71,20 +97,16 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
     }
     
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 60
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Connect data:
-        self.picker.delegate = self
-        self.picker.dataSource = self
-        picker.layer.cornerRadius = 6
-        categoryBG.layer.cornerRadius = 6
         dateBG.layer.cornerRadius = 6
         timeBG.layer.cornerRadius = 6
         
-        amount.layer.masksToBounds = true
-        amount.layer.cornerRadius = 6
-        amount.layer.borderWidth = 1
-        amount.layer.borderColor = UIColor.lightGray.cgColor
         
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
@@ -92,7 +114,7 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         datePicker.frame.size = CGSize(width: 0, height: 300)
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.maximumDate = Date()
-
+        
         dateTF.inputView = datePicker
         //dateTF.text = formatDate(date: Date()) // todays Date
         let toolBar = UIToolbar()
@@ -105,8 +127,8 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         toolBar.sizeToFit()
         dateTF.inputAccessoryView = toolBar
         
-
-
+        
+        
         let timePicker = UIDatePicker()
         timePicker.datePickerMode = .time
         timePicker.addTarget(self, action: #selector(timeChange(datePicker:)), for: UIControl.Event.valueChanged)
@@ -125,8 +147,8 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         toolBarForTime.setItems([spaceForTime, doneButtonForTime], animated: false)
         toolBarForTime.isUserInteractionEnabled = true
         toolBarForTime.sizeToFit()
-
-
+        
+        
         timeTF.inputAccessoryView = toolBarForTime
     }
     
@@ -135,7 +157,7 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     {
         dateTF.text = formatDate(date: datePicker.date)
     }
-
+    
     
     @objc func timeChange(datePicker: UIDatePicker)
     {
@@ -148,10 +170,10 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         formatter.dateFormat = "MMMM dd yy"
         return formatter.string(from: date)
     }
-
+    
     func formatTime(date: Date) -> String
     {
-    
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
@@ -161,16 +183,15 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @objc func onClickDoneButton() {
         self.view.endEditing(true)
     }
-  
+    
+    
+        
     func prepareDataForUnwindSegue(){
-        let amountName = amountNameTF.text
+        let reminderName = amountNameTF.text
         let category = pickerData[selectedRow]
         let dateSeletced = dateTF.text
         let timeSelected = timeTF.text
-        let note = amountTF.text
+        let note = noteTF.text
     }
+    
 }
-
-
-
-
