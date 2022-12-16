@@ -29,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or login with..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYS-lE-oDp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Or login with..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYS-lE-oDp">
                                 <rect key="frame" x="147" y="592.66666666666663" width="130" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -69,12 +69,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-Hk-AAe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-Hk-AAe" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="210" y="626.66666666666663" width="158" height="34.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <color key="tintColor" red="0.1529411765" green="0.20784313730000001" blue="0.29803921570000003" alpha="0.026174532310000002" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="gruppe167" title=" ">
+                                <buttonConfiguration key="configuration" style="filled" image="gruppe167" title=" " titleAlignment="automatic">
+                                    <color key="baseForegroundColor" name="AccentColor"/>
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                             </button>
@@ -93,16 +95,13 @@ elitr, sed diam nonumy eirmod tempor invidunt</string>
                             <constraint firstItem="J9Z-Tw-ud2" firstAttribute="top" secondItem="0iw-HG-Bwf" secondAttribute="top" constant="114" id="0tJ-98-Ufy"/>
                             <constraint firstItem="il1-dP-uEo" firstAttribute="top" secondItem="0iw-HG-Bwf" secondAttribute="top" constant="199" id="2gd-tq-dPI"/>
                             <constraint firstItem="t4o-lL-f7G" firstAttribute="top" secondItem="ZgD-XR-aca" secondAttribute="bottom" constant="61.666666666666515" id="3UU-QY-KGW"/>
-                            <constraint firstItem="NOg-Hk-AAe" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="210" id="5eW-K9-syO"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="bottom" secondItem="t4o-lL-f7G" secondAttribute="bottom" constant="61" id="6Id-Tp-7XJ"/>
-                            <constraint firstItem="NOg-Hk-AAe" firstAttribute="top" secondItem="jYS-lE-oDp" secondAttribute="bottom" constant="13" id="6Ix-v6-AUX"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="t4o-lL-f7G" secondAttribute="trailing" constant="25" id="9KC-EH-3xi"/>
                             <constraint firstItem="t4o-lL-f7G" firstAttribute="top" secondItem="0iw-HG-Bwf" secondAttribute="top" constant="567.66666666666663" id="Ato-Yt-YD3"/>
                             <constraint firstItem="O5y-LC-fhr" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="29" id="EMJ-fS-rmZ"/>
                             <constraint firstItem="il1-dP-uEo" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="33" id="K7i-Op-oPv"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="V0R-ra-prK" secondAttribute="trailing" constant="198" id="KFZ-OV-b9E"/>
                             <constraint firstItem="t4o-lL-f7G" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="33" id="LE3-mA-BjC"/>
-                            <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="NOg-Hk-AAe" secondAttribute="trailing" constant="25" id="MA8-UQ-2IE"/>
                             <constraint firstItem="V0R-ra-prK" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="33" id="Ogr-aw-pNg"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="J9Z-Tw-ud2" secondAttribute="trailing" constant="25" id="SwB-d4-JfE"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="jYS-lE-oDp" secondAttribute="trailing" constant="116" id="VNc-YT-jTz"/>
@@ -112,7 +111,6 @@ elitr, sed diam nonumy eirmod tempor invidunt</string>
                             <constraint firstItem="Hzc-pq-1Ng" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="36" id="aW2-39-mqN"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="ZgD-XR-aca" secondAttribute="trailing" constant="202" id="b4r-3j-38y"/>
                             <constraint firstItem="rJc-TK-UWU" firstAttribute="top" secondItem="0iw-HG-Bwf" secondAttribute="top" constant="237" id="dVZ-RI-56M"/>
-                            <constraint firstItem="ZgD-XR-aca" firstAttribute="baseline" secondItem="NOg-Hk-AAe" secondAttribute="baseline" id="hlj-jJ-cb9"/>
                             <constraint firstItem="J9Z-Tw-ud2" firstAttribute="leading" secondItem="0iw-HG-Bwf" secondAttribute="leading" constant="33" id="kLK-P4-fEh"/>
                             <constraint firstItem="O5y-LC-fhr" firstAttribute="top" secondItem="0iw-HG-Bwf" secondAttribute="top" id="lMu-mJ-mci"/>
                             <constraint firstItem="0iw-HG-Bwf" firstAttribute="trailing" secondItem="Hzc-pq-1Ng" secondAttribute="trailing" constant="286" id="mMz-zq-chY"/>
@@ -126,6 +124,8 @@ elitr, sed diam nonumy eirmod tempor invidunt</string>
                     </view>
                     <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="gbK-TD-L5l" userLabel="Okay"/>
                     <connections>
+                        <outlet property="fbLLoginBtn" destination="NOg-Hk-AAe" id="m7n-jK-rgG"/>
+                        <outlet property="forgotPassword" destination="rJc-TK-UWU" id="qSa-fS-niM"/>
                         <outlet property="nameTextField" destination="il1-dP-uEo" id="jPI-TM-P5d"/>
                         <outlet property="passwordTextField" destination="il1-dP-uEo" id="YJn-LS-Aug"/>
                     </connections>
@@ -137,7 +137,7 @@ elitr, sed diam nonumy eirmod tempor invidunt</string>
         <!--Settings-->
         <scene sceneID="reU-Sw-e29">
             <objects>
-                <tableViewController id="ZXq-42-qGE" customClass="SettingsTableViewController" customModule="iOSFinal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsTableViewController" id="ZXq-42-qGE" customClass="SettingsTableViewController" customModule="iOSFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Z8g-mL-79Z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
