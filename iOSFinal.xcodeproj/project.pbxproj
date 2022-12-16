@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244BE4F8294BF94500055CA0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F7294BF94500055CA0 /* FacebookCore */; };
+		244BE4FA294BF94500055CA0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 244BE4F9294BF94500055CA0 /* FacebookLogin */; };
 		24D3E904294BA34800FED69A /* NewAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D3E903294BA34800FED69A /* NewAmountVC.swift */; };
 		24F9382A294B8537003F06F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F93829294B8537003F06F2 /* AppDelegate.swift */; };
 		24F9382C294B8537003F06F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F9382B294B8537003F06F2 /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244BE4FA294BF94500055CA0 /* FacebookLogin in Frameworks */,
+				244BE4F8294BF94500055CA0 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,10 @@
 			dependencies = (
 			);
 			name = iOSFinal;
+			packageProductDependencies = (
+				244BE4F7294BF94500055CA0 /* FacebookCore */,
+				244BE4F9294BF94500055CA0 /* FacebookLogin */,
+			);
 			productName = iOSFinal;
 			productReference = 24F93826294B8537003F06F2 /* iOSFinal.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 24F9381D294B8537003F06F2;
+			packageReferences = (
+				244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 24F93827294B8537003F06F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,7 +323,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iosfinal.iOSFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iOSFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -340,7 +351,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iosfinal.iOSFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antivm.iOSFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -370,6 +381,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		244BE4F7294BF94500055CA0 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		244BE4F9294BF94500055CA0 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 244BE4F6294BF94400055CA0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		24F93832294B8537003F06F2 /* iOSFinal.xcdatamodeld */ = {
