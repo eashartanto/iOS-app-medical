@@ -110,11 +110,18 @@ class FinanceMovementsViewController: UIViewController, UITableViewDelegate, UIT
             Movements(accountName:"Mc Donalds NYC", category:false, dates: formatDate(dateString: "10/01/2021"), amount: -15),
         ]
         
-        
-        
     }
 
-    
+    var datalar: String?
+    @IBAction func unwindFromNewAmountVC(_ sender: UIStoryboardSegue){
+        if sender.source is NewAmountVC {
+            let senderVC = sender.source as? NewAmountVC
+            
+            data?.append(Movements(accountName: senderVC!.accName!, category: senderVC!.cat!, dates: formatDate(dateString: (senderVC?.dat)!), amount: senderVC!.amt!))
+            
+            movementsTableView.reloadData()
+         }
+    }
 
     /*
     // MARK: - Navigation

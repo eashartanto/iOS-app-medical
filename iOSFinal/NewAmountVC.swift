@@ -23,9 +23,9 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     
     @IBOutlet weak var slider: UISlider!
-
+    
     var selectedRow = 0
-
+    
     
     @IBAction func sliderValueChanged(_ sender: Any) {
         amountTF.text = "\(slider.value) €"
@@ -92,7 +92,7 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         datePicker.frame.size = CGSize(width: 0, height: 300)
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.maximumDate = Date()
-
+        
         dateTF.inputView = datePicker
         //dateTF.text = formatDate(date: Date()) // todays Date
         let toolBar = UIToolbar()
@@ -105,8 +105,8 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         toolBar.sizeToFit()
         dateTF.inputAccessoryView = toolBar
         
-
-
+        
+        
         let timePicker = UIDatePicker()
         timePicker.datePickerMode = .time
         timePicker.addTarget(self, action: #selector(timeChange(datePicker:)), for: UIControl.Event.valueChanged)
@@ -125,8 +125,8 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         toolBarForTime.setItems([spaceForTime, doneButtonForTime], animated: false)
         toolBarForTime.isUserInteractionEnabled = true
         toolBarForTime.sizeToFit()
-
-
+        
+        
         timeTF.inputAccessoryView = toolBarForTime
     }
     
@@ -135,7 +135,7 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     {
         dateTF.text = formatDate(date: datePicker.date)
     }
-
+    
     
     @objc func timeChange(datePicker: UIDatePicker)
     {
@@ -145,13 +145,13 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     func formatDate(date: Date) -> String
     {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM dd yy"
+        formatter.dateFormat = "dd/MM/yy"
         return formatter.string(from: date)
     }
-
+    
     func formatTime(date: Date) -> String
     {
-    
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
@@ -161,7 +161,7 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @objc func onClickDoneButton() {
         self.view.endEditing(true)
     }
-  
+    
     func prepareDataForUnwindSegue(){
         let amountName = amountNameTF.text
         let category = pickerData[selectedRow]
@@ -169,7 +169,23 @@ class NewAmountVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         let timeSelected = timeTF.text
         let note = amountTF.text
     }
+    var accName:String?
+    var cat:Bool?
+    var dat:String?
+    var amt:Float?
+    
+    
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
+        accName = amountNameTF.text!
+        cat = true
+        dat = dateTF.text
+        amt = slider.value
+    }
+    
+    
 }
+    
+
 
 
 
